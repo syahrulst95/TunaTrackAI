@@ -98,6 +98,16 @@ with tab1:
                     show_class_distribution(r, MODEL)
 
                 st.image(im, caption=f"Hasil Deteksi (tersimpan di {save_path.name})", width='stretch')
+
+                # 🔽 Tambahkan tombol download hasil gambar
+                with open(save_path, "rb") as f:
+                    st.download_button(
+                        label="⬇️ Download Hasil Gambar",
+                        data=f,
+                        file_name=save_path.name,
+                        mime="image/png"
+                    )
+                    
         finally:
             os.unlink(tmp_path)  # hapus file sementara
 
@@ -145,6 +155,15 @@ with tab2:
 
             st.video(out_path)
             st.success(f"Hasil video tersimpan di {out_path}")
+
+            # 🔽 Tambahkan tombol download hasil video
+            with open(out_path, "rb") as f:
+                st.download_button(
+                    label="⬇️ Download Hasil Video",
+                    data=f,
+                    file_name=Path(out_path).name,
+                    mime="video/mp4"
+                )
         finally:
             os.unlink(tmp_path)
 
@@ -188,4 +207,5 @@ with tab3:
             "audio": False
         }
     )
+
 
