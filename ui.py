@@ -91,9 +91,9 @@ def render_sidebar():
         help="Atur tingkat keyakinan (confidence threshold) minimal deteksi YOLO"
     )
 
-    st.sidebar.success("📂 Semua hasil deteksi akan tersimpan di folder `outputs/`.")
     st.sidebar.markdown("---")
     st.sidebar.markdown("👨‍💻 Dirancang dengan ❤️ oleh **Tim Riset**")
 
     return conf
+
 
