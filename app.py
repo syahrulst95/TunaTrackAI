@@ -39,7 +39,7 @@ logger.info("Running on: %s", DEVICE)
 @st.cache_resource
 def load_model() -> YOLO:
     try:
-        model = YOLO("weights/best_model_exp2_yolov9.pt")
+        model = YOLO("https://huggingface.co/syahrulst95/tuna_yolov9m/resolve/main/best_model_exp2_yolov9.pt")
         return model
     except Exception as e:
         logger.error("Gagal memuat model: %s", e)
@@ -188,3 +188,4 @@ with tab3:
             "audio": False
         }
     )
+
