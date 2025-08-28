@@ -73,7 +73,6 @@ def show_class_distribution(results, model: YOLO):
 
 # --- UI Streamlit ---
 st.write("Unggah image, video, atau gunakan **camera** untuk mendeteksi spesies tuna.")
-st.write(f"Hasil deteksi akan disimpan di folder: `{OUTPUT_DIR}`")
 
 tab1, tab2, tab3 = st.tabs(["📷 Image", "🎥 Video", "📹 Live Camera"])
 
@@ -207,5 +206,6 @@ with tab3:
             "audio": False
         }
     )
+
 
 
