@@ -1,8 +1,8 @@
 streamlit
 ultralytics
 Pillow
+numpy==1.23.5
 opencv-python-headless==4.5.5.64
-numpy
 torch
 av
 streamlit-webrtc
